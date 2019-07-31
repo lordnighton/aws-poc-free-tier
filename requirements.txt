@@ -1,2 +1,7 @@
 # Flask Framework
 Flask==1.0.2
+
+# Jinja templating framework
+jinja2>=2.6
+
+WTForms==2.1

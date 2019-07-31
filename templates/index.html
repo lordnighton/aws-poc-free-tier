@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Python and AWS</title>
+  <!--
+      <link rel="stylesheet" href="/static/css/main.css">
+      <link rel="shortcut icon" href="/static/images/lstm.ico">
+  -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <center>PoC for python and AWS</center>
+    </h1>
+
+    {% block content %}
+    {% for message in form.fileUploadField.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    <form method=post>
+
+      {{ form.fileUploadField.label }}
+      {{ form.fileUploadField }}
+
+      {{ form.submit }}
+    </form>
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>
