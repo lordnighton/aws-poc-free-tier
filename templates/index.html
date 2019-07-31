@@ -11,24 +11,22 @@
 
 <body>
   <div class="container">
-    <h1>
-      <center>PoC for python and AWS</center>
-    </h1>
+    <center>
+      <img src="https://www.underconsideration.com/brandnew/archives/dropbox_2017_logo.png" height="50px" />
 
-    {% block content %}
-    {% for message in form.fileUploadField.errors %}
-    <div class="flash">{{ message }}</div>
-    {% endfor %}
-
-    <form method=post>
-
-      {{ form.fileUploadField.label }}
-      {{ form.fileUploadField }}
-
-      {{ form.submit }}
-    </form>
+      {% block content %}
+      {% for message in form.fileUploadField.errors %}
+      <div class="flash">{{ message }}</div>
+      {% endfor %}
+    
+      <form method="post" action="/upload" enctype="multipart/form-data">
+        {{ form.fileUploadField.label }}
+        {{ form.fileUploadField }}
+        <br /><br />
+        {{ form.submit }}
+      </form>
+    </center>
     {% endblock %}
-
   </div>
 </body>
 
